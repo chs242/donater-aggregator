@@ -1,0 +1,46 @@
+*{
+    font-family: 'comfortaa', cursive;
+    
+}
+
+.header{
+    background-color: #d3d3d3;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-bottom: 10vh;
+}
+
+.table-container{   
+    padding-top: 10vh;
+}
+
+form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 14px 5px;
+}
+
+.wide{
+    width: 12%;
+}
+
+.narrow{
+    width: 8%;
+}
+
+.input-label-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2vh 1vw;
+};
+
+.submit-button{
+    margin-top: 2vh;
+}
+
+
+
+
