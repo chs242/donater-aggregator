@@ -1,45 +1,90 @@
+/*general settings for the entire page*/
 *{
-    font-family: 'comfortaa', cursive;
-    
+    font-family: 'comfortaa', cursive;    
 }
 
+/*used this method to give the background image of the .container-div a lower opacity than the writing inside it*/
+.container-div{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.container-div img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+
+/*header*/
 .header{
-    background-color: #d3d3d3;
     text-align: center;
     padding-top: 5vh;
     padding-bottom: 5vh;
-    margin-bottom: 10vh;
 }
 
-.table-container{   
-    padding-top: 10vh;
+.logout-button{
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vh;
+    padding: 1.5vh 1vw;
+    border-radius: 10%;
+    z-index: 1;
+    color: black;
+    text-decoration-line: none;
+}
+
+.container-div a:hover{
+    background-color: #f5f5dc;
+    border: 1px solid #f5f5de;
 }
 
 form{
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: 14px 5px;
 }
 
+
+/*input boxes set to diiferent widths*/
 .wide{
     width: 12%;
+    font-weight: 700;
+    z-index: 2;
+    
 }
 
 .narrow{
     width: 8%;
+    font-weight: 700;
+    z-index: 2;
 }
 
+/*labels right above input boxes*/
 .input-label-container{
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 2vh 1vw;
-};
-
-.submit-button{
-    margin-top: 2vh;
+    opacity: 0.8;
 }
+
+#submit-button{
+    padding: 0.75vh 0.5vw;
+    color: none;  
+}
+
+#submit-button:hover{
+    background-color: #d3d3d3;
+}
+
 
 
 

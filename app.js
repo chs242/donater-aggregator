@@ -13,10 +13,13 @@ const submitButton = document.getElementById("submit-button");
 
 //define some sample data
 let tabledata = [
+  { name: "Bodner Stevie", sukkos2018: "-", pesach2018: "-", sukkos2019: "180", contactNum: "07456743231", contactMeth: "", rating: 5, comments: "geat guy" },
+  { name: "Weiler Irwin", sukkos2018: "-", pesach2018: "-", sukkos2019: "100", contactNum: "07456743231", contactMeth: "mobile phone", rating: 4, comments: "lovely guy" },
   { name: "Bodner Stevie", sukkos2018: "1200", pesach2018: "360", sukkos2019: "200", contactNum: "07456743231", contactMeth: "", rating: 5, comments: "geat guy" },
   { name: "Bodner Stevie", sukkos2018: "1200", pesach2018: "360", sukkos2019: "200", contactNum: "07456743231", contactMeth: "", rating: 5, comments: "geat guy" },
   { name: "Bodner Stevie", sukkos2018: "1200", pesach2018: "360", sukkos2019: "200", contactNum: "07456743231", contactMeth: "", rating: 5, comments: "geat guy" },
   { name: "Bodner Stevie", sukkos2018: "1200", pesach2018: "360", sukkos2019: "200", contactNum: "07456743231", contactMeth: "", rating: 5, comments: "geat guy" },
+  { name: "Cantor Aryeh", sukkos2018: "100", pesach2018: "360", sukkos2019: "250", contactNum: "07453546765", contactMeth: "", rating: 2, comments: "geat guy" },
   { name: "Bodner Stevie", sukkos2018: "1200", pesach2018: "360", sukkos2019: "200", contactNum: "07456743231", contactMeth: "", rating: 5, comments: "geat guy" },
 ];
 
@@ -63,6 +66,19 @@ let table = new Tabulator("#example-table", {
   ]
 });
 
+
+//function that wipes the input fields
+function reloadInputFields(){
+    inputName.value = "";
+    inputSks18.value = "";
+    inputPsch18.value = "";
+    inputSks19.value = "";
+    inputContNum.value = "";
+    inputContMeth.value = "";
+    inputRatings.value = "";
+    inputComments.value ="";
+}
+
 function addEntry(e) {
   e.preventDefault();
   let myObject = {};
@@ -74,8 +90,15 @@ function addEntry(e) {
   myObject.contactMeth = inputContMeth.value;
   myObject.rating = inputRatings.value;
   myObject.comments = inputComments.value;
+  
+  //adds the values of the input filed to the table
   tabledata.push(myObject);
+
+  //wipes the input fields
+  reloadInputFields();
 };
+
+
 
 submitButton.addEventListener("click", addEntry);
 
