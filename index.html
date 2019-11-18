@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Donations aggregator</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap" rel="stylesheet">
-    
-    <!--Link to Tabulator CDN-->
-    <link href="https://unpkg.com/tabulator-tables@4.4.3/dist/css/tabulator.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.4.3/dist/js/tabulator.min.js"></script>
-    
-    
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Donations aggregator</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap" rel="stylesheet">
+
+  <!--Link to Tabulator CDN-->
+  <link href="https://unpkg.com/tabulator-tables@4.4.3/dist/css/tabulator.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.4.3/dist/js/tabulator.min.js"></script>
+
+
+
 
 </head>
+
 <body>
-    <header class="header">
-        <h1>Donor Aggregator</h1>
-        <h2>Kollel Ruach Chaim's powerful donation tracking tool</h2>
-    </header>
+  <header class="header">
+    <h1>Donor Aggregator</h1>
+    <h2>Kollel Ruach Chaim's powerful donation tracking tool</h2>
+  </header>
 
-    <form id="input-form">
-        <div class="input-label-container wide"><label for="input-name">name:<br></label><input id="input-name" type="text" name="input-name"></div>
-        <div class="input-label-container narrow"><label for="input-sks18"></label>Sukkos 2018:</label><input id="input-sks18" type="text" name="input-sks18"></div>
-        <div class="input-label-container narrow"><label for="input-psch18">Pesach 2018:</label><input id="input-psch18" type="text" name="input-psch18"></div>
-        <div class="input-label-container narrow"><label for="input-sks19">Sukkos 2018:</label><input id="input-sks19" type="text" name="input-sks19"></div>
-        <div class="input-label-container wide"><label for="cont-num">Contact Number:</label><input id="cont-num" type="text" name="cont-num"></div>
-        <div class="input-label-container wide"><label for="cont-meth">Contact Method:</label><input id="cont-meth" type="text" name="cont-meth"></div>
-        <div class="input-label-container narrow"><label for="ratings">Rating:    </label><input id="ratings" type="number" name="ratings"></div>
-        <div class="input-label-container wide"><label for="comments">Comments:    </label><input id="comments" type="text" name="comments"></div>
-        <div class="submit-button"><input id="submit-button" type="submit" value="Click To Submit"></div>
-    </form>
-    
+  <form id="input-form">
+    <div class="input-label-container wide"><label for="input-name">name:<br></label><input id="input-name" type="text"
+        name="input-name"></div>
+    <div class="input-label-container narrow"><label for="input-sks18"></label>Sukkos 2018:</label><input
+        id="input-sks18" type="text" name="input-sks18"></div>
+    <div class="input-label-container narrow"><label for="input-psch18">Pesach 2018:</label><input id="input-psch18"
+        type="text" name="input-psch18"></div>
+    <div class="input-label-container narrow"><label for="input-sks19">Sukkos 2018:</label><input id="input-sks19"
+        type="text" name="input-sks19"></div>
+    <div class="input-label-container wide"><label for="cont-num">Contact Number:</label><input id="cont-num"
+        type="text" name="cont-num"></div>
+    <div class="input-label-container wide"><label for="cont-meth">Contact Method:</label><input id="cont-meth"
+        type="text" name="cont-meth"></div>
+    <div class="input-label-container narrow"><label for="ratings">Rating: </label><input id="ratings" type="number"
+        name="ratings"></div>
+    <div class="input-label-container wide"><label for="comments">Comments: </label><input id="comments" type="text"
+        name="comments"></div>
+    <div class="submit-button"><input id="submit-button" type="submit" value="Click To Submit"></div>
+  </form>
 
-    <!--requiured for Tabultor CDN-->
-    <div id="example-table"></div>
 
-    <script type="text/javascript" src="app.js"></script> 
+  <!-- Table will be injected here -->
+  <div id="example-table"></div>
+
+  <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>
