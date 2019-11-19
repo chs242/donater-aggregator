@@ -68,15 +68,15 @@ let table = new Tabulator("#example-table", {
 
 
 //function that wipes the input fields
-function reloadInputFields(){
-    inputName.value = "";
-    inputSks18.value = "";
-    inputPsch18.value = "";
-    inputSks19.value = "";
-    inputContNum.value = "";
-    inputContMeth.value = "";
-    inputRatings.value = "";
-    inputComments.value ="";
+function reloadInputFields() {
+  inputName.value = "";
+  inputSks18.value = "";
+  inputPsch18.value = "";
+  inputSks19.value = "";
+  inputContNum.value = "";
+  inputContMeth.value = "";
+  inputRatings.value = "";
+  inputComments.value = "";
 }
 
 function addEntry(e) {
@@ -90,9 +90,12 @@ function addEntry(e) {
   myObject.contactMeth = inputContMeth.value;
   myObject.rating = inputRatings.value;
   myObject.comments = inputComments.value;
-  
   //adds the values of the input filed to the table
   tabledata.push(myObject);
+
+  // scrolls the table to the new entry
+  const tableHolder = document.querySelector(".tabulator-tableHolder");
+  tableHolder.scrollTop = tableHolder.scrollHeight;
 
   //wipes the input fields
   reloadInputFields();
